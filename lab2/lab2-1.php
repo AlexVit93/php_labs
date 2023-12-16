@@ -1,14 +1,23 @@
 <?php
 $name = "Vitali";
 $surname = "Mayerau";
+echo "". $name ."". $surname ."<br>";
 
-echo"". $name ."". $surname ."<br>";
+// $breakfast = "gamburger";
+// $$breakfast = "and tea";
 
-echo"$breakfast <br>$gamburger ";
-echo "$breakfast"; echo "$$breakfast";
+// echo"$breakfast \n $gamburger \n";
+// echo "$breakfast \n"; echo "$$breakfast \n";
 
-echo $breakfast; echo $$breakfast;
+// echo $breakfast; echo $$breakfast;
 
+$breakfast = "gamburger";
+$$breakfast = "and tea";
+
+echo $breakfast . "<br>";
+echo $gamburger . "<br>";
+echo $breakfast . "<br>"; 
+echo $$breakfast . "<br>";
 
 // ### (а) `echo "$breakfast $gamburger";`
 // - **Что будет выведено:** Здесь будут выведены значения переменных `$breakfast` и `$gamburger`. Поскольку `$breakfast` имеет значение `"gamburger"`, и `$$breakfast` означает переменную, имя которой содержится в `$breakfast`, то есть `$gamburger`, которая имеет значение `"and tea"`, будет выведено `"gamburger and tea"`.
@@ -29,13 +38,13 @@ $color1 = "blue";
 $color2 = "red";  
 
 
-echo "<span style='color: $color1;'>$breakfast2</span><br>";
+echo "<span style='color: $color1;\n'>\n $breakfast2 \n</span><br>\n";
 
 
 $breakfast = "pizza";
 
 
-echo "<span style='color: $color2;'>$breakfast2</span><br>";
+echo "<span style='color: $color2;\n'>\n $breakfast2</span><br>\n";
 ?>
 
 <!-- Переменная $breakfast2 как ссылка на $breakfast: Переменная $breakfast2 создается как ссылка на переменную $breakfast. Это означает, что обе переменные ссылаются на одно и то же значение в памяти. Любые изменения, внесенные в $breakfast, будут отражаться в $breakfast2.

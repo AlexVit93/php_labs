@@ -33,7 +33,7 @@ $surname = "Mayerau";
     ?>
 
     <footer>
-        <p>Разработчик скрипта: <?=$name; ?><br><?=$surname; ?></p>
+        <p>Разработчик скрипта: <?=$name; ?><?=$surname; ?></p>
     </footer>
 </body>
 </html>

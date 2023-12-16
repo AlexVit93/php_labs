@@ -1,4 +1,9 @@
 <?php
+$name = "Vitali";
+$surname = "Mayerau";
+
+echo"". $name ."". $surname ."<br>";
+
 $lang = 'ru';
 
 if ($lang == 'ru') {

@@ -1,3 +1,9 @@
+<?php
+$name = "Vitali";
+$surname = "Mayerau";
+
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -39,5 +45,8 @@
             }
         ?>
     </table>
+    <footer>
+        <p>Разработчик скрипта: <?=$name; ?><?=$surname; ?></p>
+    </footer>
 </body>
 </html>

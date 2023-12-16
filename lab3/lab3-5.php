@@ -1,3 +1,9 @@
+<?php
+$name = "Vitali";
+$surname = "Mayerau";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,18 +24,21 @@ function arth($x, $precision = 0.000001) {
 
     do {
         $n++;
-        $term = $term * (-1) * (1 / $x * $x); // (-1)^n / x^(2n+1)
+        $term = - $term * 1 / $x / $x; 
         $sum += $term / (2 * $n + 1);
-    } while (abs($term) > $precision); 
+    } while (abs($term) / (2 * $n + 1) > $precision); 
 
     return $sum;
 }
 
 
+
 $x = 1.1; // Значение должно быть |x| > 1
 echo "Arth($x) = " . arth($x);
 ?>
-
+<footer>
+        <p>Разработчик скрипта: <?=$name; ?><?=$surname; ?></p>
+    </footer>
 
 </body>
 </html>

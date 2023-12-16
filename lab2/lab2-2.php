@@ -1,4 +1,9 @@
 <?php
+$name = "Vitali";
+$surname = "Mayerau";
+
+echo "". $name ."". $surname ."<br>";
+
 define('NUM_E', 2.71828);
 
 
