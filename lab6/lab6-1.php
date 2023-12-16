@@ -3,6 +3,9 @@
 $name = "Vitali";
 $surname = "Mayerau";
 
+echo "<br>Разработчик скрипта:". $name ."". $surname ."<br>";
+
+
 $string = 'A+BBB-AB+A--B+BAA+B-AB';
 
 # Вставляем пробел после каждого символа 'A'
@@ -17,8 +20,8 @@ foreach ($matches[1] as $match) {
 }
 
 
-echo "Строка с пробелами после 'A': " . $stringWithSpaces . "\n";
-echo "Количество символов 'B' между '+' и '-': " . $countB . "\n";
+echo "<br>Строка с пробелами после 'A': <br>" . $stringWithSpaces . "\n";
+echo "<br>Количество символов 'B' между '+' и '-': <br>" . $countB . "\n";
 
-print_r("Разработчик скрипта: <?=$name; ?><br><?=$surname; ?>");
+
 ?>

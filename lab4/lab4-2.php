@@ -1,3 +1,9 @@
+<?php
+$name = "Vitali";
+$surname = "Mayerau";
+
+echo "Разработчик скрипта:". $name ."". $surname ."<br>";
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

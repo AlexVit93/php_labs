@@ -19,9 +19,9 @@ $surname = "Mayerau";
     }
 
 
-    $x = isset($_GET['x']) ? floatval($_GET['x']) : 0;
-    $y = isset($_GET['y']) ? floatval($_GET['y']) : 0;
-    $z = isset($_GET['z']) ? floatval($_GET['z']) : 0;
+    $x = isset($_GET['x']) ? floatval($_GET['x']) : 5;
+    $y = isset($_GET['y']) ? floatval($_GET['y']) : 7;
+    $z = isset($_GET['z']) ? floatval($_GET['z']) : 9;
 
  
     $b = calculate_b($x, $y, $z);
@@ -29,7 +29,7 @@ $surname = "Mayerau";
     ?>
 
     <footer>
-       <p>Разработчик скрипта: <?=$name; ?><br><?=$surname; ?></p>
+       <p>Разработчик скрипта: <?=$name; ?><?=$surname; ?></p>
     </footer>
 </body>
 </html>

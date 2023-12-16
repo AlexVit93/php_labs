@@ -2,6 +2,9 @@
 
 $name = "Vitali";
 $surname = "Mayerau";
+
+echo "<br>Разработчик скрипта:". $name ."". $surname ."<br>";
+
 function customRand($min, $max) {
     return mt_rand($min, $max);
 }
@@ -19,7 +22,7 @@ for ($i = 0; $i < 15; $i++) {
     $array[$i] = customRand(1, 100); 
 }
 
-echo "Исходный массив: ";
+echo "<br>Исходный массив: <br>";
 foreach ($array as $value) {
     echo $value . " ";
 }
@@ -39,11 +42,10 @@ $temp = $array[$minIndex];
 $array[$minIndex] = $array[$swapIndex];
 $array[$swapIndex] = $temp;
 
-echo "Измененный массив: ";
+echo "<br>Измененный массив: <br>";
 foreach ($array as $value) {
     echo $value . " ";
 }
 echo "\n";
 
-print_r("Разработчик скрипта: <?=$name; ?><br><?=$surname; ?>");
 ?>

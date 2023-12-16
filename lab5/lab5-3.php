@@ -2,6 +2,9 @@
 $name = "Vitali";
 $surname = "Mayerau";
 
+echo "<br>Разработчик скрипта:". $name ."". $surname ."<br>";
+
+
 $depart = [
     'ФАИС' => [
         'кафедра 1' => 'Информационные технологии',
@@ -39,5 +42,4 @@ foreach ($depart as $faculty => $departments) {
     echo "</ul>"; 
 
 }
-print_r("Разработчик скрипта: <?=$name; ?><br><?=$surname; ?>");
 ?>

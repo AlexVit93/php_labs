@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаба6-2</title>
+</head>
+<body>
 <?php
 # Вариант 11
 $name = "Vitali";
@@ -6,25 +14,28 @@ $surname = "Mayerau";
 $text = 'Арбуз прекрасен, бурый медведь ходит по лесу.';
 
 function removeLastLetter($word) {
-    return substr($word, 0, strlen($word) - 1);
+    return mb_substr($word, 0, mb_strlen($word) - 1);
 }
 
-# Разбиваем текст на слова
 $words = explode(' ', $text);
 $wordCount = 0;
 
-# Проверяем вторую букву и удаляем последнюю букву каждого слова
 foreach ($words as $index => $word) {
-    $word = str_replace([',', '.'], '', $word); 
-    if (strlen($word) > 1 && substr($word, 1, 1) == 'р') {
+    // Удаляем знаки препинания для чистоты проверки
+    $cleanWord = str_replace([',', '.'], '', $word); 
+    // Проверяем, что слово длиннее одного символа и вторая буква 'р'
+    if (mb_strlen($cleanWord) > 1 && mb_substr($cleanWord, 1, 1) == 'р') {
         $wordCount++;
     }
-    $words[$index] = removeLastLetter($word);
+    // Удаляем последнюю букву
+    $words[$index] = removeLastLetter($cleanWord); 
 }
 
-echo "Количество слов, где вторая буква 'р': " . $wordCount . "\n";
-echo "Слова без последней буквы: " . implode(' ', $words) . "\n";
+echo "<br>Количество слов, где вторая буква 'р': " . $wordCount . "\n";
+echo "<br>Слова без последней буквы: " . implode(' ', $words) . "\n";
 
-
-echo "Разработчик скрипта: " . $name . "<br>" . $surname;
+echo "<br>Разработчик скрипта: " . $name . " " . $surname;
 ?>
+    
+</body>
+</html>

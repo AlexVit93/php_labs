@@ -3,28 +3,28 @@
 $name = "Vitali";
 $surname = "Mayerau";
 
+echo "<br>Разработчик скрипта:". $name ."". $surname ."<br>";
+
 $treug = [];
 for ($n = 1; $n <= 10; $n++) {
     $treug[] = $n * ($n + 1) / 2;
 }
 
-echo "Треугольные числа: " . implode("  ", $treug) . "\n";
+echo "Треугольные числа: <br>" . implode("  ", $treug) . "\n";
 
 $kvd = [];
 for ($i = 1; $i <= 10; $i++) {
     $kvd[] = $i * $i;
 }
 
-echo "Квадраты чисел: " . implode("  ", $kvd) . "\n";
+echo "<br>Квадраты чисел: <br>" . implode("  ", $kvd) . "\n";
 
 $rez = array_merge($treug, $kvd);
 
-echo "Объединенный массив: " . implode("  ", $rez) . "\n";
+echo "<br>Объединенный массив: <br>" . implode("  ", $rez) . "\n";
 
 rsort($rez);
 
-echo "Отсортированный массив в обратном порядке: " . implode("  ", $rez) . "\n";
+echo "<br>Отсортированный массив в обратном порядке: <br>" . implode("  ", $rez) . "\n";
 
-
-print_r("Разработчик скрипта: <?=$name; ?><br><?=$surname; ?>");
 ?>
